@@ -16,7 +16,7 @@ const Joblist = () => {
 
                 <Searchbar />
 
-                <div className="flex flex-col gap-1 my-4">
+                <div className="flex flex-col gap-2 my-4">
                     <JobItem />
                     <JobItem />
                     <JobItem />

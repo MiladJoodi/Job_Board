@@ -66,7 +66,7 @@ const Nav = () => {
                 {/* Link Box */}
                 <div className="flex flex-col gap-1">
                     {list.map((item, index) => (
-                        <div key={index} className="flex gap-3 dark:text-gray-200 dark:hover:text-white hover:bg-gray-100 dark:bg-gray-900 hover:dark:bg-gray-700 px-4 py-2 border cursor-pointer">
+                        <div key={index} className="rounded-md flex gap-3 dark:text-gray-200 dark:hover:text-white hover:bg-gray-100 dark:bg-gray-900 hover:dark:bg-gray-700 px-4 py-2 border cursor-pointer">
                             {item.icon}
                             <span>{item.title}</span>
                         </div>

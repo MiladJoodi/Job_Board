@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const JobItem = () => {
     return (
-        <div className="flex flex-col gap-2 border px-2 pt-4 pb-2">
+        <div className="flex flex-col gap-2 border px-2 pt-4 pb-2 rounded-md">
             <div className="flex gap-2 items-center justify-between">
                 <div className="flex gap-2 items-center">
                     <Image
