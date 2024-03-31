@@ -14,7 +14,8 @@ const Hero = () => {
                 <div className="flex w-full max-w-sm flex-col gap-2">
                     <div className="flex relative items-center">
                         <input
-                            className="mx-auto border p-3 rounded-md font-weight-medium border-gray-200 shadow-sm w-full outline-none"
+                            autoFocus 
+                            className="mx-auto border foco p-3 rounded-md font-weight-medium border-gray-200 shadow-sm w-full outline-none"
                             placeholder="Keywords"
                             type="text"
                         />
