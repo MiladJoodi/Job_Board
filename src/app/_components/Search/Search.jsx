@@ -4,7 +4,7 @@ import Button from "../../../Components/Button";
 const Searchbar = () => {
     return (
         <div>
-            <div className="flex gap-1 bg-blue-300">
+            <div className="flex items-center gap-1">
                 <div className=" relative flex items-center">
                     <input
                         autoFocus
@@ -25,7 +25,7 @@ const Searchbar = () => {
                     <MapPin size={21} className="absolute left-3 top-3 text-gray-400 cursor-pointer" />
                 </div>
 
-                <Button className=" flex justify-center items-center gap-2 btn-black text-white rounded-md p-3 px-5 dark:border">
+                <Button className="w-36 flex justify-center items-center gap-2 btn-black text-white rounded-md p-3 px-5 dark:border">
                     Search
                 </Button>
 

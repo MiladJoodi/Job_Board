@@ -61,7 +61,7 @@ const footerLink = [
 
 const Nav = () => {
     return (
-        <nav className="flex flex-col p-4 gap-6 bg-red-300">
+        <nav className="flex flex-col w-2/6 mx-2 p-4 gap-6">
 
                 {/* Link Box */}
                 <div className="flex flex-col gap-1">
