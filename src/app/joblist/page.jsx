@@ -2,7 +2,22 @@ import Nav from "../_components/Nav/Nav"
 import Searchbar from "../_components/Search/Search"
 import JobItem from "../_components/JobItem/JobItem"
 
-const Joblist = () => {
+const getData = async ()=>{
+    const res = await fetch('https://mocki.io/v1/045902ab-9c72-468d-bef2-5cd7a7656a3e')
+
+    if(!res.ok){
+        throw new Error ("Failed to fetch data")
+    }
+    return res.json();
+}
+
+const Joblist = async () => {
+
+    const data = await getData()
+    const jobs = data.jobs
+
+    console.log(jobs)
+
     return (
         <div className="flex gap-2 pb-52">
             <Nav />
@@ -17,21 +32,11 @@ const Joblist = () => {
                 <Searchbar />
 
                 <div className="flex flex-col gap-2 my-4">
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
-                    <JobItem />
+                    {jobs.map((job)=>(
+                        <JobItem data={job} key={job.id} />
+
+                    ))}
+
                 </div>
 
             </main>

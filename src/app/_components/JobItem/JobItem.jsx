@@ -2,25 +2,25 @@ import { BarChartBig, Bookmark, Bug, Clock7, Eye, Flag, Gauge, Heart, MapPin } f
 import Image from "next/image";
 import Link from "next/link";
 
-const JobItem = () => {
+const JobItem = ({data}) => {
     return (
         <div className="flex flex-col gap-2 border px-2 pt-4 pb-2 rounded-md">
             <div className="flex gap-2 items-center justify-between">
                 <div className="flex gap-2 items-center">
                     <Image
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png"
-                        alt="company title"
+                        src={data.logo}
+                        alt={data.title}
                         width={70}
                         height={70}
-                        className="w-[55px] h-[55px] rounded-full object-cover"
+                        className="w-[55px] h-[55px] rounded-full object-contain"
                     />
                     <div className="flex flex-col">
                         <Link href="/" className="font-bold text-xl hover:underline cursor-pointer">
-                            Senior Front End Developer
+                            {data.title}
                         </Link>
 
                         <Link href="" className="text-sm hover:underline">
-                            Eindhoven, Netherlands
+                            {data.description}
                         </Link>
                     </div>
                 </div>
@@ -41,27 +41,27 @@ const JobItem = () => {
                 <div className="flex gap-4 px-2">
                     <div className="flex gap-0.5 items-center text-gray-500 text-sm">
                         <MapPin size={14} />
-                        Remote
+                        {data.location}
                     </div>
 
                     <div className="flex gap-0.5 items-center text-gray-500 text-sm">
                         <Clock7 size={14} />
-                        Part Time
+                        {data.employment_type}
                     </div>
 
                     <div className="flex gap-0.5 items-center text-gray-500 text-sm">
                         <BarChartBig size={14} />
-                        85,000$
+                        {data.salary}$
                     </div>
 
                     <div className="flex gap-0.5 items-center text-gray-500 text-sm">
                         <Gauge size={14} />
-                        Senior
+                        {data.level}
                     </div>
 
                      <div className="flex gap-0.5 items-center text-gray-500 text-sm">
                         <Eye size={14} />
-                        871
+                        {data.view}
                     </div>
                     
                 </div>
