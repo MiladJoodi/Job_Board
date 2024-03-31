@@ -1,5 +1,6 @@
 import { MapPin, Search } from "lucide-react";
 import Button from "../../../Components/Button";
+import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -22,12 +23,10 @@ const Hero = () => {
                         <MapPin size={21} className="absolute right-3 text-gray-400 cursor-pointer" />
                     </div>
 
-                    <div className="">
-                        <Button className="flex justify-center items-center gap-2 mx-auto w-full btn-black text-white rounded-md p-3 dark:border">
+                        <Link href="/joblist" className="flex justify-center items-center gap-2 mx-auto w-full btn-black text-white rounded-md p-3 dark:border">
                             Search
                             <Search size={21} />
-                        </Button>
-                    </div>
+                        </Link>
 
                 </div>
             </div>
