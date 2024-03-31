@@ -1,9 +1,8 @@
-import { Languages, UserRound } from "lucide-react";
+import { Languages } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import DarkModeSwitch from "../DarkModeSwitch/DarkModeSwitch";
-import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
-
+import LoginBtn from "../LoginBtn/LoginBtn"
 
 const Header = () => {
   return (
@@ -19,16 +18,13 @@ const Header = () => {
           <Languages />
         </div>
 
-        <LoginLink>
-          <div className="p-2 border rounded-full cursor-pointer">
-            <UserRound />
-          </div>
-        </LoginLink>
-        
+
         <div className="p-2 border rounded-full cursor-pointer">
           <DarkModeSwitch />
         </div>
 
+        <LoginBtn />
+        
       </div>
     </header>
   );
