@@ -14,12 +14,12 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex gap-5 justify-center items-center h-full">
-        <div className="p-2 border rounded-full cursor-pointer">
+        <div className="p-2 rounded-lg dark:text-gray-200 text-gray-700 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 hover:dark:bg-gray-700 transition-all duration-150 cursor-pointer">
           <Languages />
         </div>
 
 
-        <div className="p-2 border rounded-full cursor-pointer">
+        <div className="p-2 rounded-lg dark:text-gray-200 text-gray-700 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 hover:dark:bg-gray-700 transition-all duration-150 cursor-pointer">
           <DarkModeSwitch />
         </div>
 

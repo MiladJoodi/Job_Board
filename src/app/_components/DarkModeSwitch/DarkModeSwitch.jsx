@@ -8,7 +8,7 @@ const DarkModeSwitch = () => {
     return (
         <div>
             {
-                resolvedTheme === 'dark' ? <Sun onClick={()=>setTheme('light')} className='text-xl cursor-pointer hover:text-amber-500' /> : <Moon onClick={()=>setTheme('dark')} className='text-xl cursor-pointer hover:text-amber-500' />
+                resolvedTheme === 'dark' ? <Sun onClick={()=>setTheme('light')} className='text-xl cursor-pointer' /> : <Moon onClick={()=>setTheme('dark')} className='text-xl' />
             }
         </div>
     );
