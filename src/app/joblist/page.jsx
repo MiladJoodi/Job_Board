@@ -1,5 +1,6 @@
 import Nav from "../_components/Nav/Nav"
 import Searchbar from "../_components/Search/Search"
+import JobItem from "../_components/JobItem/JobItem"
 
 const Joblist = () => {
     return (
@@ -14,6 +15,8 @@ const Joblist = () => {
                 </div>
 
                 <Searchbar />
+
+                <JobItem />
 
             </main>
 
