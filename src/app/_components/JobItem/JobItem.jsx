@@ -1,12 +1,12 @@
-import { BarChartBig, Bookmark, Bug, Clock7, Eye, Flag, Gauge, Heart, MapPin } from "lucide-react";
+import { BarChartBig, Bookmark, Clock7, Eye, Flag, Gauge, Heart, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const JobItem = ({data}) => {
+const JobItem = ({ data }) => {
     return (
         <div className="flex flex-col gap-2 border px-2 pt-4 pb-2 rounded-md">
             <div className="flex gap-2 items-center justify-between">
-                <Link href={"/details/"+data.id} className="flex gap-2 items-center">
+                <Link href={"/details/" + data.id} className="flex gap-2 items-center">
                     <Image
                         src={data.logo}
                         alt={data.title}
@@ -59,14 +59,16 @@ const JobItem = ({data}) => {
                         {data.level}
                     </div>
 
-                     <div className="flex gap-0.5 items-center text-gray-500 text-sm">
+                    <div className="flex gap-0.5 items-center text-gray-500 text-sm">
                         <Eye size={14} />
                         {data.view}
                     </div>
-                    
+
                 </div>
 
-                <Bug size={14} />
+                <Link href="/">
+                    <Flag className="text-gray-500" size={12} />
+                </Link>
 
             </div>
 
