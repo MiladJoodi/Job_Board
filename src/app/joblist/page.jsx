@@ -11,19 +11,18 @@ const getData = async () => {
     if (!res.ok) {
         throw new Error("Failed to fetch data")
     }
+
     return res.json();
 }
 
 
 const Joblist = async () => {
- 
 
     const data = await getData()
-
     const jobs = data.jobs
 
-    console.log(jobs)
-    
+    // console.log(jobs)
+
 
     return (
         <div className="flex gap-2 pb-52">

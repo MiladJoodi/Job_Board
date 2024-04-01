@@ -6,7 +6,7 @@ const JobItem = ({data}) => {
     return (
         <div className="flex flex-col gap-2 border px-2 pt-4 pb-2 rounded-md">
             <div className="flex gap-2 items-center justify-between">
-                <div className="flex gap-2 items-center">
+                <Link href={"/details/"+data.id} className="flex gap-2 items-center">
                     <Image
                         src={data.logo}
                         alt={data.title}
@@ -15,15 +15,15 @@ const JobItem = ({data}) => {
                         className="w-[55px] h-[55px] rounded-full object-contain"
                     />
                     <div className="flex flex-col">
-                        <Link href="/" className="font-bold text-xl hover:underline cursor-pointer">
+                        <h2 className="font-bold text-xl hover:underline cursor-pointer">
                             {data.title}
-                        </Link>
+                        </h2>
 
-                        <Link href="" className="text-sm hover:underline">
+                        <h2 className="text-sm hover:underline">
                             {data.description}
-                        </Link>
+                        </h2>
                     </div>
-                </div>
+                </Link>
 
                 <div className="flex items-center justify-center gap-2">
                     <Link href="/" className="p-2">
@@ -51,7 +51,7 @@ const JobItem = ({data}) => {
 
                     <div className="flex gap-0.5 items-center text-gray-500 text-sm">
                         <BarChartBig size={14} />
-                        {data.salary}$
+                        ({data?.salary}).toFixed(2)$
                     </div>
 
                     <div className="flex gap-0.5 items-center text-gray-500 text-sm">
