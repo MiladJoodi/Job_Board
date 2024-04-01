@@ -1,6 +1,7 @@
 import { MapPin, Search } from "lucide-react";
 import Button from "../../../Components/Button";
 import Link from "next/link";
+import SearchHero from "../../_components/SearchHero/SearchHero"
 
 const Hero = () => {
     return (
@@ -12,23 +13,10 @@ const Hero = () => {
                         Any industry. Any location. Any experience level.
                     </p>
                 </div>
-                <div className="flex w-full max-w-sm flex-col gap-2">
-                    <div className="flex relative items-center">
-                        <input
-                            autoFocus 
-                            className="mx-auto border foco p-3 rounded-md font-weight-medium border-gray-200 shadow-sm w-full outline-none"
-                            placeholder="Keywords"
-                            type="text"
-                        />
-                        <MapPin size={21} className="absolute right-3 text-gray-400 cursor-pointer" />
-                    </div>
+                
+                {/* Search */}
+                <SearchHero />
 
-                        <Link href="/joblist" className="flex justify-center items-center gap-2 mx-auto w-full btn-black text-white rounded-md p-3 dark:border">
-                            Search
-                            <Search size={21} />
-                        </Link>
-
-                </div>
             </div>
         </section>
     );
